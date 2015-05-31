@@ -1,0 +1,21 @@
+.navbar{
+    border-radius: 0;
+}
+.navEl:hover{
+    background-color: gray;
+}
+.section1{
+    background-color: #f5eee2;
+    margin: 0;
+    padding: 10px;
+}
+.section2{
+    background-color: #DCD5C7;
+    margin: 0;
+    padding: 25px;
+}
+.slider{
+    width: 55%;
+    float: left;
+    margin-right: 5%;
+}
