@@ -19,3 +19,10 @@
     float: left;
     margin-right: 5%;
 }
+.textBlock{
+    text-align: justify;
+    font-size: 1.2em;
+}
+.customRules{
+    color: black;
+}

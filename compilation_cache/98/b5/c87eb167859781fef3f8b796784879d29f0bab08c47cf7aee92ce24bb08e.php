@@ -38,7 +38,8 @@ class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24
         echo "    <div class=\"container-fluid\" style=\"padding:0;margin-top:0;\">
         <section class=\"section1\">
          <div class=\"container\">
-        <div class=\"slider\">
+         <div class=\"row\">
+        <div class=\"col-sm-6 slider\">
         <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">
   <!-- Indicators -->
   <ol class=\"carousel-indicators\">
@@ -93,8 +94,15 @@ class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24
     <span class=\"sr-only\">Next</span>
   </a>
 </div>
-</div>
-<p style >asdsahddfsjjvjkfk;jldfmvkffffffffffffffffffffffvepomeop</p>
+</div >
+   <div class=\"col-sm-4\">
+   <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
+   <div class=\"textBlock\">
+    <span >Armadillo - з англійської перекладається, як <strong> броненосець           </strong>логічно було б продавати цих перкрасних тваринок, але ми             просто сервіс бронювання столиків у ресторанах ;)</span>
+        <hr style=\"color:black;\">
+    </div>
+    </div>
+    </div>
 </div>       
         </section>
         <section class=\"section2\">
