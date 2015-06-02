@@ -11,4 +11,4 @@
 	catch(Exception $e){
 		print($e);
 	}
-    echo $twig->render('index.html', array());	
+    echo $twig->render('index2.html', array());	

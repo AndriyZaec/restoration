@@ -5,24 +5,38 @@
     background-color: gray;
 }
 .section1{
-    background-color: #f5eee2;
+    background-color: #AAA9AE;
     margin: 0;
-    padding: 10px;
+    padding: 4%;
 }
 .section2{
-    background-color: #DCD5C7;
+    background-color: #99989D;
     margin: 0;
     padding: 25px;
 }
 .slider{
-    width: 55%;
-    float: left;
+    width: 100%;
     margin-right: 5%;
 }
 .textBlock{
-    text-align: justify;
+    text-align: center;
     font-size: 1.2em;
 }
 .customRules{
     color: black;
+}
+.orderBtn{
+    width:50%;
+    color:white;
+    background-color: transparent;
+    border: solid 1px;
+    border-color: white;
+}
+.orderBtn:hover{
+    width:50%;
+    color:black;
+    background-color: #99989D;
+    border: solid 1px;
+    border-color: black;
+    outline: none;
 }

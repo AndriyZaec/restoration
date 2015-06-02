@@ -1,14 +1,14 @@
 <?php
 
-/* index.html */
-class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24bb08e extends Twig_Template
+/* index2.html */
+class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c475040c612 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html", "index.html", 1);
+        $this->parent = $this->loadTemplate("base.html", "index2.html", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
@@ -35,12 +35,12 @@ class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24
     public function block_content($context, array $blocks = array())
     {
         // line 6
-        echo "    <div class=\"container-fluid\" style=\"padding:0;margin-top:0;\">
-        <section class=\"section1\">
-         <div class=\"container\">
-         <div class=\"row\">
-        <div class=\"col-sm-6 slider\">
-        <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">
+        echo "<div class=\"container-fluid\" style=\"padding:0\">
+<section class=\"section1\">
+<div style=\"position: relative;margin: 0 auto;width: 100%;\">
+              <div class=\"row\">
+               <div class=\"col-sm-6\">
+                <div id=\"myCarousel\" class=\"carousel slide slider\" data-ride=\"carousel\">
   <!-- Indicators -->
   <ol class=\"carousel-indicators\">
     <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
@@ -94,15 +94,19 @@ class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24
     <span class=\"sr-only\">Next</span>
   </a>
 </div>
-</div >
-   <div class=\"col-sm-4\">
-   <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
+    </div>
+    <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
    <div class=\"textBlock\">
     <span >Armadillo - з англійської перекладається, як <strong> броненосець           </strong>логічно було б продавати цих перкрасних тваринок, але ми             просто сервіс бронювання столиків у ресторанах ;)</span>
-    </div>
-    </div>
-    </div>
-</div>       
+        <hr>
+        <span>Завдяки нашому сервісу ви зможете - <b>швидко</b>, <b>зручно</b>
+            та <b>без лишніх дій</b> замовити столик у найкращих ресторанах та пабах. </span><br><br>
+            <input type=\"button\" class=\"orderBtn\" value=\"ЗАМОВИТИ\" onclick=\"\">
+    
+                 </div> 
+                </div>
+            </div>
+            </div>
         </section>
         <section class=\"section2\">
             <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
@@ -126,13 +130,14 @@ class __TwigTemplate_98b5c87eb167859781fef3f8b796784879d29f0bab08c47cf7aee92ce24
             <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
             <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
         </section>
+    
     </div>       
 ";
     }
 
     public function getTemplateName()
     {
-        return "index.html";
+        return "index2.html";
     }
 
     public function isTraitable()
