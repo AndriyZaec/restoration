@@ -36,11 +36,10 @@ class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c47504
     {
         // line 6
         echo "<div class=\"container-fluid\" style=\"padding:0\">
-<section class=\"section1\">
-<div style=\"position: relative;margin: 0 auto;width: 100%;\">
-              <div class=\"row\">
-               <div class=\"col-sm-6\">
-                <div id=\"myCarousel\" class=\"carousel slide slider\" data-ride=\"carousel\">
+    <section class=\"section1\">
+            <div class=\"row\">
+                <div class=\"col-sm-6\">
+                  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">
   <!-- Indicators -->
   <ol class=\"carousel-indicators\">
     <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
@@ -93,19 +92,16 @@ class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c47504
     <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>
     <span class=\"sr-only\">Next</span>
   </a>
-</div>
-    </div>
-    <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
-   <div class=\"textBlock\">
-    <span >Armadillo - з англійської перекладається, як <strong> броненосець           </strong>логічно було б продавати цих перкрасних тваринок, але ми             просто сервіс бронювання столиків у ресторанах ;)</span>
-        <hr>
-        <span>Завдяки нашому сервісу ви зможете - <b>швидко</b>, <b>зручно</b>
+</div></div>
+           
+            <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
+           <div class=\"textBlock\">
+<span >Armadillo - з англійської перекладається, як <strong> броненосець           </strong>логічно було б продавати цих перкрасних тваринок, але ми             просто сервіс бронювання столиків у ресторанах ;)</span>
+                <hr>
+                <span>Завдяки нашому сервісу ви зможете - <b>швидко</b>, <b>зручно</b>
             та <b>без лишніх дій</b> замовити столик у найкращих ресторанах та пабах. </span><br><br>
-            <input type=\"button\" class=\"orderBtn\" value=\"ЗАМОВИТИ\" onclick=\"\">
-    
-                 </div> 
-                </div>
-            </div>
+            <input type=\"button\" class=\"orderBtn\" value=\"ЗАМОВИТИ\" onclick=\"\">            
+            </div> 
             </div>
         </section>
         <section class=\"section2\">
