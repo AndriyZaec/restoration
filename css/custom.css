@@ -1,36 +1,38 @@
 .navbar{
     border-radius: 0;
+    background-color: black;
 }
 .navEl:hover{
     background-color: gray;
 }
 .section1{
-    background-color: #AAA9AE;
+/*    background-color: #AAA9AE;*/
+    background-color: #FFF5EE;
     margin: 0;
     padding: 4%;
 }
 .section2{
-    background-color: #99989D;
+/*    background-color: #99989C;*/
+    background-color: #EEE9E9;
     margin: 0;
-    padding: 25px;
+    padding: 4%;
 }
 .slider{
-    width: 100%;
-    margin-right: 5%;
+    height: 40%;
 }
 .textBlock{
-    text-align: center;
-    font-size: 1.2em;
+    text-align: justify;
+    font-size: 1.4em;
 }
 .orderBtn{
-    width:50%;
-    color:white;
+    width:100%;
+    color:black;
     background-color: transparent;
     border: solid 1px;
-    border-color: white;
+    border-color: black;
 }
 .orderBtn:hover{
-    width:50%;
+    width:100%;
     color:black;
     background-color: #99989D;
     border: solid 1px;

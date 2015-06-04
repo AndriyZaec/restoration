@@ -38,47 +38,66 @@ class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c47504
         echo "<div class=\"container-fluid\" style=\"padding:0\">
     <section class=\"section1\">
             <div class=\"row\">
-                <div class=\"col-sm-6\">
-                  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">
+            <div class=\"col-sm-4\">
+                <h2 style=\"text-align:center;\"><b><i>Замовлення столиків</i></b></h2><br>
+           <div class=\"textBlock\">
+<span ><strong>Armadillo</strong> - сервіс для резервування столиків онлайн.</span>
+                <hr style=\"border-color:black;\">
+                <span>З розвитком інформаційних технологій та інтернету життя спростилось, а наш сервіс максимально спростить замовлення столиків, щоб ви цим надмірно не переймались. Просто виберіть заклад і місце.</span><br><br>
+            <input type=\"button\" class=\"orderBtn\" value=\"ЗРЕЗЕРВУВАТИ\" onclick=\"\">            
+            </div><br><br> 
+            </div>
+            <div class=\"col-sm-4\">
+            <h2 style=\"text-align:center;\"><b><i>Замовлення страв додому</i></b></h2><br>
+           <div class=\"textBlock\">
+<span ><strong>Armadillo</strong> - сервіс для замовлення страв онлайн.</span>
+                <hr style=\"border-color:black;\">
+                <span>Ми пропонуємо вам можливість замовити страви з меню рестранів, які надають можливість доставки, якщо у них відсутня така послуга просто зателефонуйте менеджеру та знайдіть компроміс.</span><br><br>
+            <input type=\"button\" class=\"orderBtn\" value=\"ЗАМОВИТИ\" onclick=\"\">            
+            </div><br><br> 
+            </div>
+            <div class=\"col-sm-4\">
+            <h2 style=\"text-align:center;\"><b><i>Реєстрація закладу</i></b></h2><br>
+           <div class=\"textBlock\">
+<span ><strong>Armadillo</strong> - сервіс для клієнтів та ресторанів</span>
+                <hr style=\"border-color:black;\">
+                 <span>Цей сервіс не лобіює інтереси конкретного закладу, ає відкритим для всіх бажаючих, як ресторанів так і споживачів. Створіть сторінку свого закладу та з легкістю адмініструйте її, додавайте фото та опис.</span><br><br>
+            <input type=\"button\" class=\"orderBtn\" value=\"РЕЄЕСТРАЦІЯ\" onclick=\"\">            
+            </div><br><br>
+            </div>
+            </div>
+        </section>
+              <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\" style=\"min-width:100%;\">
   <!-- Indicators -->
   <ol class=\"carousel-indicators\">
     <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
     <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>
     <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>
-    <li data-target=\"#myCarousel\" data-slide-to=\"3\"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class=\"carousel-inner\" role=\"listbox\">
     <div class=\"item active\">
-      <img src=\"img/r1.jpg\" alt=\"Chania\">
+      <img src=\"img/r1.jpg\" alt=\"order\" style=\"min-width:100%; max-height:70%;\">
       <div class=\"carousel-caption\">
-        <h3>Chania</h3>
-        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        <h3>Замовлення столиків</h3>
+        <p style=\"font-size:1.2em;\">Легкий спосіб без зайвих проблем замовити столик у зручномудля вас ресторані.</p>
       </div>
     </div>
 
     <div class=\"item\">
-      <img src=\"img/r1.jpg\" alt=\"Chania\">
+      <img src=\"img/r2.jpg\" alt=\"menu\" style=\"min-width:100%; max-height:70%;\">
       <div class=\"carousel-caption\">
-        <h3>Chania</h3>
-        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        <h3>Замовлення страв онлайн</h3>
+        <p style=\"font-size:1.2em;\">Швидке замовлення страв у декілька \"кліків\" ;)</p>
       </div>
     </div>
 
     <div class=\"item\">
-      <img src=\"img/r1.jpg\" alt=\"Flower\">
+      <img src=\"img/r3.jpg\" alt=\"Flower\" style=\"min-width:100%; max-height:70%;\">
       <div class=\"carousel-caption\">
-        <h3>Flowers</h3>
-        <p>Beatiful flowers in Kolymbari, Crete.</p>
-      </div>
-    </div>
-
-    <div class=\"item\">
-      <img src=\"img/r1.jpg\" alt=\"Flower\">
-      <div class=\"carousel-caption\">
-        <h3>Flowers</h3>
-        <p>Beatiful flowers in Kolymbari, Crete.</p>
+        <h3>Для власників та адміністраторів ресторанів</h3>
+        <p>Включення ресторану до сервісу та адміністрування сторінки ресторану.</p>
       </div>
     </div>
   </div>
@@ -92,39 +111,39 @@ class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c47504
     <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>
     <span class=\"sr-only\">Next</span>
   </a>
-</div></div>
-           
-            <h3 style=\"text-align:center;\"><strong>Вас вітає сервіс <i>Armadillo</i>.</strong></h3>
-           <div class=\"textBlock\">
-<span >Armadillo - з англійської перекладається, як <strong> броненосець           </strong>логічно було б продавати цих перкрасних тваринок, але ми             просто сервіс бронювання столиків у ресторанах ;)</span>
-                <hr>
-                <span>Завдяки нашому сервісу ви зможете - <b>швидко</b>, <b>зручно</b>
-            та <b>без лишніх дій</b> замовити столик у найкращих ресторанах та пабах. </span><br><br>
-            <input type=\"button\" class=\"orderBtn\" value=\"ЗАМОВИТИ\" onclick=\"\">            
-            </div> 
+</div>
+         <section class=\"section2\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-lg-12 text-center\">
+                    <h1>Мета проекту</h1>
+                </div>
             </div>
-        </section>
-        <section class=\"section2\">
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
-            <p>sadddddddddddddddddddddddddddddddddddddddasdsada</p>
+        </div>  
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-lg-3 col-md-6 text-center\">
+                       <img src=\"img/growth.png\" alt=\"growth\">
+                        <h3>Розвиток</h3>
+                        <p>Основною метою проекту є і буде залишатись розвиток, дійсно крутих та креативних закладів.</p>
+                </div>
+                <div class=\"col-lg-3 col-md-6 text-center\">
+                         <img src=\"img/time.png\" alt=\"time\">
+                        <h3>Час</h3>
+                        <p>Також однією з цілей є заощадження часу,на таку тривіальну річ як замовлення столику.</p>
+                </div>
+                <div class=\"col-lg-3 col-md-6 text-center\">
+                         <img src=\"img/search.png\" alt=\"time\">
+                        <h3>Пошук</h3>
+                        <p>Сервіс дає змогу вибрати заклад з обраною специфікою</p>
+                </div>
+                <div class=\"col-lg-3 col-md-6 text-center\">
+                         <img src=\"img/services.png\" alt=\"time\">
+                        <h3>Сервіси</h3>
+                        <p class=\"text-muted\">Доступ, до додаткових сервісів закладу</p>
+                </div>
+            </div>
+        </div>
         </section>
     
     </div>       
