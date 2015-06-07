@@ -122,22 +122,22 @@ class __TwigTemplate_c5fdb3a9626af7c337654d96f7bad368d64e89148944a585af5a1c47504
         </div>  
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-lg-3 col-md-6 text-center\">
+                <div class=\" col-md-6 text-center\">
                        <img src=\"img/growth.png\" alt=\"growth\">
                         <h3>Розвиток</h3>
                         <p>Основною метою проекту є і буде залишатись розвиток, дійсно крутих та креативних закладів.</p>
                 </div>
-                <div class=\"col-lg-3 col-md-6 text-center\">
+                <div class=\" col-md-6 text-center\">
                          <img src=\"img/time.png\" alt=\"time\">
                         <h3>Час</h3>
-                        <p>Також однією з цілей є заощадження часу,на таку тривіальну річ як замовлення столику.</p>
+                        <p>Також однією з цілей є заощадження часу,на таку тривіальну річ як замовлення столику, для хорошого вечора.</p>
                 </div>
-                <div class=\"col-lg-3 col-md-6 text-center\">
+                <div class=\"col-md-6 text-center\">
                          <img src=\"img/search.png\" alt=\"time\">
                         <h3>Пошук</h3>
                         <p>Сервіс дає змогу вибрати заклад з обраною специфікою</p>
                 </div>
-                <div class=\"col-lg-3 col-md-6 text-center\">
+                <div class=\"col-md-6 text-center\">
                          <img src=\"img/services.png\" alt=\"time\">
                         <h3>Сервіси</h3>
                         <p class=\"text-muted\">Доступ, до додаткових сервісів закладу</p>
