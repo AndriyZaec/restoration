@@ -69,6 +69,9 @@ class __TwigTemplate_f742c39d6da608d749b66d2009ce6bbc514126ad9f8aa46db377a56f51a
         echo "    
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>
     <script src=\"js/bootstrap.min.js\"></script>
+   <link href=\"http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css\" rel=\"stylesheet\">
+   <script src=\"http://code.jquery.com/jquery-1.10.2.js\"></script>
+   <script src=\"http://code.jquery.com/ui/1.10.4/jquery-ui.js\"></script>
   </body>
 </html>
 
@@ -96,6 +99,6 @@ class __TwigTemplate_f742c39d6da608d749b66d2009ce6bbc514126ad9f8aa46db377a56f51a
 
     public function getDebugInfo()
     {
-        return array (  88 => 43,  85 => 42,  80 => 7,  69 => 45,  67 => 42,  29 => 7,  21 => 1,);
+        return array (  91 => 43,  88 => 42,  83 => 7,  69 => 45,  67 => 42,  29 => 7,  21 => 1,);
     }
 }
