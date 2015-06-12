@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Edit page{% endblock %}
+
+{% block content %}
+<br/>
+<div class="container-fluid">
+    <script>
+        setInterval(function(){
+            $( "#infoLogin" ).hide( "fold", { direction: "up" }, 'slow' );
+        },3000)
+    </script>
+    <div id="infoLogin" class="alert alert-info" >Ви ввійшли як адмнінстратор {{ name }}</div><br/><br/>
+    <input id="name" class="underline" value="{{  name }}">
+    <input type="radio" class="radio" id="radio" />
+    <label for="radio">А я переключаю радиокнопку</label><br/><br/>
+    <textarea>{{ descript }}</textarea>
+</div>
+
+{% endblock %}
