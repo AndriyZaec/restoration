@@ -54,4 +54,13 @@
 .passTxt{
     width: 100%;
 }
-
+.regLoginTxt{
+   width: 30%;
+}
+.regPassTxt{
+    width: 30%;
+}
+#descript{
+    max-width: 100%;
+    min-width: 100%;
+}
