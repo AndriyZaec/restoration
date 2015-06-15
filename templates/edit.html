@@ -5,16 +5,17 @@
 {% block content %}
 <br/>
 <div class="container-fluid">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         setInterval(function(){
-            $( "#infoLogin" ).hide( "fold", { direction: "up" }, 'slow' );
-        },3000)
+            $( "#infoLogin" ).hide( "fold", { direction: "up" }, 'slow' )
+        },3000);
+        $("#name").onclick(function(){
+            alert("asd");
+        });
     </script>
     <div id="infoLogin" class="alert alert-info" >Ви ввійшли як адмнінстратор {{ name }}</div><br/><br/>
-    <input id="name" class="underline" value="{{  name }}">
-    <input type="radio" class="radio" id="radio" />
-    <label for="radio">А я переключаю радиокнопку</label><br/><br/>
+    <input id="name" class="underline" value="{{  name }}"><br/><br/>
     <textarea>{{ descript }}</textarea>
 </div>
-
 {% endblock %}
