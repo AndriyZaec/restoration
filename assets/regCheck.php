@@ -17,5 +17,4 @@ if(isset($_POST['e_mail'])){
                 echo("dec");
                 die();
             }
-        }	
-?>
+        }

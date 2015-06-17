@@ -3,9 +3,88 @@
 {% block title %}Home page{% endblock %}
 
 {% block content %}
+<div class="container-fluid"><br/><br/>
+        {% for resturant in resturants %}
+    <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#href{{resturant.id_r}}">
+                    {{ resturant.name }}
+                </a>
+            </h4>
+        </div>
+        <div id="href{{resturant.id_r}}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p><b>Адреса</b> :<i>{{ resturant.address }}</i></p>
+                <p><b>Телефон</b> : {{ resturant.tel }}</p><br/>
+                <h4>Опис</h4>
+                <hr style="border-color: #000000"/>
+                {{ resturant.descript }}
+                <hr style="border-color: #000000"/>
+                <div class="row" style="text-align: center">
+                    <div class="col-sm-4">
+                        <img src="assets/{{ resturant.photo1 }}" height="100%" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="assets/{{ resturant.photo2 }}" height="100%" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="assets/{{ resturant.photo3 }}" height="100%" width="100%" class="img-rounded">
+                    </div>
+                </div>
+                <hr style="border-color: #000000"/>
+                <!-- Button trigger modal -->
+                <button type="button" id="{{ resturant.id_r }}" class="btn idOrder" data-toggle="modal" data-target="#myModal">
+                    Замовити
+                </button>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <script>
+                            $(function() {
+                                $( "#datepicker" ).datepicker();
+                            });
+                        </script>
+                        <form id="orderForm" name="orderForm" action="" method="post">
+                            <input id="target" name="target" style="display: none;">
+                            <input id="datepicker" name="date" placeholder="Виберіть дату"><br/><br/>
+                            <input type="time" name="time" id="time" placeholder="Введіть час"><br/><br/>
+                            <input id="client" name="client" placeholder="Ваше ім'я">
+                            <script>
+                                $(document).ready(function(){
+                                    $('.btn.idOrder').click(function() {
+                                        var id=($(this).attr('id'));
+                                        $('#order').click(function(){
+                                            var dateO=$("#datepicker").val();
+                                            var timeO=$("#time").val();
+                                            var clientO=$("#client").val();
+                                            $.post("assets/orderCheck.php", {id:id, date: dateO, time:timeO, client:clientO },function(data) {
 
-<div class="container-fluid">
-
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                        <button type="button" id="order" class="btn btn-primary">Замовити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
-
+</div>
 {% endblock %}
