@@ -1,19 +1,25 @@
 <?php
-$con = mysqli_connect("localhost","root","785019","restoration");
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+    $con = mysqli_connect("localhost","root","785019","restoration");
 
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    die;
-}
-
-if(isset($_POST)){
-    $result = $con->query("SELECT `e-mail` FROM restoration.resturant where `e-mail`='".$_POST['e_mail']."' LIMIT 1");
-    if ($result->num_rows == 0) {
-        echo("confirm");
-        die();
-    }else{
-        echo("dec");
-        die();
+    if (mysqli_connect_errno())
+    {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        die;
     }
-}
+
+    if(isset($_POST)){
+        $todayDate = new DateTime();
+        $todayTime = new DateTime();
+        $todayDate->format("m/d/Y");
+        $todayTime->format("H:i");
+        $duration=new DateInterval("PT1H");
+        $todayTime->add($duration);
+        if($_POST['date']>=$todayDate->format("m/d/Y") and $_POST['time']>$todayTime->format("H:i")){
+            echo 'ok';
+        }else{
+            echo 'bad';
+        }
+    }

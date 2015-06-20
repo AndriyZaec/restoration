@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+<script src="../js/bootstrap.min.js"></script>
+<div class="container-fluid">
+    <br/>
+    {% if answer==true %}
+        <div class="alert alert-success text-center">Вітаю! Ви успішно зареєстрували заклад {{ name }}!<br/>Зараз ви автоматично перейдете на сторінку входу.
+            <br/><br/><button style="width: 30%" id="redirect" class="orderBtn">Перейти на сторінку входу</button></div>
+    {% elseif answer==false %}
+        <div class="alert alert-danger text-center">Щось пройшло не так пройдіть етап реєстрації знову, будь ласка.</div>
+    {% endif %}
+</div>
+<script>
+//    setInterval(function(){
+//        document.location.href = "http://localhost/restoration/manage.php";
+//    },4000);
+    $("#redirect").click(function(){
+        document.location.href = "http://localhost/restoration/manage.php";
+    })
+</script>
+{% endblock %}
