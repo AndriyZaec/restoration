@@ -15,8 +15,7 @@
             $sql="SELECT * FROM restoration.resturant WHERE `e-mail`='".$_POST['E-mail']."' and pass='".md5($_POST['pass'])."'";
             $result=$con->query($sql);
             while($row = $result->fetch_assoc()) {
-               $name=$row['name'];
-                $descript=$row['descript'];
+                $data=$row;
                 $email=$row['e-mail'];
             }
         }
@@ -33,4 +32,4 @@
 	catch(Exception $e){
 		print($e);
 	}
-    echo $twig->render('edit.html', array('name' => $name,'descript' => $descript,'email'=>$email ));
+    echo $twig->render('edit.html', array('email' => $email,'data' => $data));
