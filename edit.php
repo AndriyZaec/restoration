@@ -1,6 +1,8 @@
 <?php
     //include_once("assets/connection.php");
-
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
         $con = mysqli_connect("localhost","root","785019","restoration");
 
         if (mysqli_connect_errno())
@@ -19,6 +21,17 @@
                 $email=$row['e-mail'];
             }
         }
+        $sql="SELECT id_r FROM restoration.resturant WHERE `e-mail`='".$_POST['E-mail']."' LIMIT 1";
+        $result=$con->query($sql);
+        while($row = $result->fetch_assoc()) {
+            $id=$row['id_r'];
+        }
+        $orders=array();
+        $sql="SELECT * FROM restoration.orders WHERE resturant='".$id."'";
+        $result=$con->query($sql);
+        while($row = $result->fetch_assoc()) {
+            $orders[]=$row;
+        }
     
     try{
 		require_once 'lib/Twig/Autoloader.php';
@@ -32,4 +45,4 @@
 	catch(Exception $e){
 		print($e);
 	}
-    echo $twig->render('edit.html', array('email' => $email,'data' => $data));
+    echo $twig->render('edit.html', array('email' => $email,'data' => $data,'orders'=>$orders));

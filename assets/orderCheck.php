@@ -18,7 +18,12 @@ ini_set('display_startup_errors', 1);
         $duration=new DateInterval("PT1H");
         $todayTime->add($duration);
         if($_POST['date']>=$todayDate->format("m/d/Y") and $_POST['time']>$todayTime->format("H:i")){
-            echo 'ok';
+            $sql=("INSERT INTO orders (date,time,client,guests,resturant) VALUES('".$_POST['date']."','".$_POST['time']."','".$_POST['client']."','".$_POST['guests']."','".$_POST['id']."')");
+            if($con->query($sql)){
+                echo 'true';
+            }else{
+                echo 'bad';
+            }
         }else{
             echo 'bad';
         }

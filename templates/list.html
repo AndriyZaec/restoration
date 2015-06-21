@@ -61,7 +61,8 @@
                             <input id="target" name="target" style="display: none;">
                             <input id="datepicker" name="date" placeholder="Виберіть дату"><br/><br/>
                             <input type="time" name="time" id="time" placeholder="Введіть час"><br/><br/>
-                            <input id="client" name="client" placeholder="Ваше ім'я">
+                            <input id="client" name="client" placeholder="Ваше ім'я"><br/><br/>
+                            <input type="number" id="guests" placeholder="Кількість гостів">
                             <script>
                                 $(document).ready(function(){
                                     $('.btn.idOrder').click(function() {
@@ -70,8 +71,13 @@
                                             var dateO=$("#datepicker").val();
                                             var timeO=$("#time").val();
                                             var clientO=$("#client").val();
-                                            $.post("assets/orderCheck.php", {id:id, date: dateO, time:timeO, client:clientO },function(data) {
-                                                alert(data);
+                                            var guests=$("#guests").val();
+                                            $.post("assets/orderCheck.php", {id:id, date: dateO, time:timeO, client:clientO, guests:guests },function(data) {
+                                                if(data=='true'){
+                                                    document.location.href="index.php";
+                                                }else{
+                                                    alert('дані введено не коректно');
+                                                }
                                             });
                                         });
                                     });

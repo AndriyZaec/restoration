@@ -11,32 +11,62 @@
         },3000);
     </script>
     <div id="infoLogin" class="alert alert-info" >Ви ввійшли як адмнінстратор {{ data.name }}</div><br/>
+    <div id="alertEdit"></div>
      <div class="row text-center">
          <div class="col-sm-6">
-             <h3>Редагування інформації</h3>
+             <h3>Замовлення</h3>
              <hr style="border-color:black;"/>
-            <input id="name" name="name" value="{{  data.name }}" style="width: 100%"><br/><br/>
-            <input id="address" name="address" value="{{ data.address }}" style="width: 100%"><br/><br/>
-            <input id="tel" name="tel" value="{{ data.tel }}" style="width: 100%"><br/><br/>
-            <input id="email" name="email" value="{{ email }}" style="width: 100%"><br/><br/>
-            <textarea id="description" style="width: 100%">{{ data.descript }}</textarea><br/><br/>
-             <input type="button" id="edit" class="orderBtn" value="Редагувати">
+             <ul class="list-group">
+                 {% if orders is empty %}
+                 <li class="list-group-item">Немає замовлень :(</li>
+                 {% else %}
+                    {% for order in orders %}
+                        <li class="list-group-item">Час : {{order.time}} | К-ксть гостей : {{order.guests}} | На кого : {{order.client}}</li>
+                    {% endfor %}
+                 {% endif %}
+             </ul>
+             <input type="button" class="orderBtn" id="showEdit" value="Редагування інформації">
          </div>
          <script>
-             $("#edit").click(function(){
-                 var name = $("#name").val();
-                 var address = $("#address").val();
-                 var tel = $("#tel").val();
-                 var email = $("#email").val();
-                 var description = $("description").val();
-                 alert(descript);
-                 $.post("assets/editCheck.php", {name:name,address:address,tel:tel,email:email,description:description },function(data) {
-                     alert(data);
-                 });
+             var flag=false;
+             $("#showEdit").click(function(){
+                 flag=true;
+                 $("#editBlock").show("drop",{direction:"right"}, 'slow');
+                 $("#showEdit").val('Сховати блок редагування');
+                 if(flag==true){
+                     $("#showEdit").click(function(){
+                         flag=false;
+                         $("#editBlock").hide("drop",{direction:"right"}, 'slow');
+                         $("#showEdit").val('Редагування інформації');
+                     })
+                 }
              })
+                $("#edit").click(function(){
+                    var name = $("#name").val();
+                    var address = $("#address").val();
+                    var tel = $("#tel").val();
+                    var email = $("#email").val();
+                    var description = $("#description").val();
+                    $.post("assets/editCheck.php", {name:name,address:address,tel:tel,email:email,description:description },function(data) {
+                        alert(data);
+                      $("#alertEdit").html(data);
+                      setInterval(function(){
+                          $( "#alertEdit" ).hide( "fold", { direction: "up" }, 'slow' )
+                      },3000);
+                    });
+                })
          </script>
          <div class="col-sm-6">
-
+             <div id="editBlock" style="display: none">
+             <h3>Редагування інформації</h3>
+             <hr style="border-color:black;"/>
+             <input id="name" name="name" value="{{  data.name }}" style="width: 100%"><br/><br/>
+             <input id="address" name="address" value="{{ data.address }}" style="width: 100%"><br/><br/>
+             <input id="tel" name="tel" value="{{ data.tel }}" style="width: 100%"><br/><br/>
+             <input type="hidden" id="email" name="email" value="{{ email }}" style="width: 100%"><br/><br/>
+             <textarea id="description" style="width: 100%">{{ data.descript }}</textarea><br/><br/>
+             <input type="button" id="edit" class="orderBtn" value="Редагувати">
+             </div>
          </div>
      </div>
     <div class="row text-center" style="padding: 3%;">
